@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    width: 90%;
+    height: 700px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#000, #490564, #5F0E55, #000);
+}
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animaton 1.5s infinite linear;
+    -webkit-animation: pipe-animation 2s infinite linear;
+}
+
+.nyan{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+    -webkit-animation: jump 500ms ease-out;
+}
+
+.planet{
+    position: absolute;
+    width: 350px;
+    right: 0;
+}
+
+/*Pipe Animation*/
+@keyframes pipe-animation {
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+@-webkit-keyframes pipe-animation {
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+/*Jump Animation*/
+
+@keyframes jump {
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+@-webkit-keyframes jump {
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
